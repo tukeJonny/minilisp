@@ -21,15 +21,14 @@
   [s-form env]
   (let [[_ val-name exp] s-form
         evaluated (evaluate env exp)]
-      (if-some [got (get-value env val-name)]
-        (set-value env val-name evaluated))))
-
+    (if-some [got (get-value env val-name)]
+      (set-value env val-name evaluated))))
 
 (defn- eval-define
   [s-form env]
   (let [[_ val-name exp] s-form
         evaluated (evaluate env exp)]
-      (set-value env val-name evaluated)))
+    (set-value env val-name evaluated)))
 
 (defn- eval-lambda
   [s-form env]

@@ -25,6 +25,6 @@
   [keys values outer-env]
   (let [env (make-Env outer-env)
         zipped (map list keys values)]
-      (doseq [[key value] zipped]
-        (set-value env key value))
-      env))
+    (doseq [[key value] zipped]
+      (set-value env key value))
+    env))
